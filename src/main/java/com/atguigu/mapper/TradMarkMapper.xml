@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.atguigu.mapper.TradMarkMapper">
+
+
+	<select id="getTradMark" resultType="com.atguigu.bean.T_MALL_TRADE_MARK">
+		select DISTINCT
+		a.id,a.ppmch,b.flbh1 from t_mall_trade_mark a
+		left join t_mall_tm_class b on a.Id=b.pp_id
+	</select>
+	
+	<select id="getTradMarkById" resultType="com.atguigu.bean.T_MALL_TRADE_MARK">
+		select a.* from t_mall_trade_mark a LEFT JOIN t_mall_tm_class b
+		on a.Id=b.pp_id
+		where flbh1=#{id}
+
+	</select>
+
+</mapper>

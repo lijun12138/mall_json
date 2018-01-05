@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.atguigu.mapper.Class1Mapper">
+	<select id="getClass1" resultType="com.atguigu.bean.T_MALL_CLASS_1">
+		select * from
+		t_mall_class_1
+	</select>
+
+</mapper>
